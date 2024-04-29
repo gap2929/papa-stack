@@ -6,6 +6,11 @@ import Base from "../layouts/Base.astro";
   <main x-data="dodo">
     <p x-text="ga"></p>
     <p x-text="gp"></p>
+    <ul>
+      <template x-for="f in fruits">
+        <li x-text="f"></li>
+      </template>
+    </ul>
   </main>
 </Base>
 <script>
@@ -14,5 +19,6 @@ import Base from "../layouts/Base.astro";
   Alpine.data("dodo", () => ({
     ga: "hello gap",
     gp: "hello ss",
+    fruits: ["a", "b", "c"],
   }));
 </script>
