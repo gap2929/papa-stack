@@ -1,0 +1,18 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="todo">
+  <main x-data="dodo">
+    <p x-text="ga"></p>
+    <p x-text="gp"></p>
+  </main>
+</Base>
+<script>
+  import Alpine from "alpinejs";
+
+  Alpine.data("dodo", () => ({
+    ga: "hello jj",
+    gp: "hello ss",
+  }));
+</script>
